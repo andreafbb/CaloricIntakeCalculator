@@ -1,25 +1,25 @@
-
-
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway";
-
 }
 
+/* ✅ MODIFICATO: body più mobile-safe */
 body {
     background-color: #EBEBEB;
-    height: 100vh;
+    min-height: 100vh;   /* 🔥 invece di height */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;       /* 🔥 aggiunto per mobile */
 }
 
 #root {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 10px; /* 🔥 aggiunto */
 }
 
 .title {
@@ -27,24 +27,24 @@ body {
     border-radius: 20px;
     text-align: center;
     padding: 2rem;
-    margin:3rem;
+    margin: 1.5rem; /* 🔥 ridotto per mobile */
     width: 100%;
-    max-width: 400px;
+    max-width: 420px; /* 🔥 leggermente aumentato */
     box-shadow: 0 0 20px #b9b9b9;
 }
 
 h1 {
-    padding:1rem
+    padding:1rem;
 }
 
 .box {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
-     padding: 2rem;
-    margin:3rem;
+    padding: 2rem;
+    margin: 1.5rem; /* 🔥 ridotto */
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     box-shadow: 0 0 20px #b9b9b9;
 }
 
@@ -54,17 +54,19 @@ h1 {
 }
 
 .gender_button {
-  margin-right: 1rem;
+    margin-right: 1rem;
 }
 
+/* 🔥 INPUT MOBILE FIX */
 input {
-padding: 0.5rem;
-margin-bottom: 1rem;
-background-color: #dbdada;
-border: none;
-font-size: 1rem;
-box-shadow: 0 0 5px rgb(216, 215, 215);
-border-radius: 12px;
+    width: 100%;          /* 🔥 aggiunto */
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    background-color: #dbdada;
+    border: none;
+    font-size: 16px;      /* 🔥 importante per mobile (evita zoom iOS) */
+    box-shadow: 0 0 5px rgb(216, 215, 215);
+    border-radius: 12px;
 }
 
 input:hover {
@@ -73,11 +75,12 @@ input:hover {
 }
 
 input:focus {
-    outline: none; /* rimuove il bordo blu default */
+    outline: none;
     border: 2px solid #000000;
     box-shadow: 0 0 5px #010101;
 }
 
+/* SELECT OK ma migliorato */
 .menu {
     appearance: none;
     width: 100%;
@@ -95,20 +98,20 @@ input:focus {
 }
 
 .menu:focus {
-    outline: none; /* rimuove il bordo blu default */
+    outline: none;
     border: 2px solid #000000;
     box-shadow: 0 0 5px #010101;
 }
 
+/* 🔥 BUTTON MOBILE FIX */
 button {
-    width: 100%;
-    max-width: 150px;
+    width: 100%;          /* 🔥 prima era 150px */
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 0.5rem;    
+    padding: 0.7rem;
     border: none;
     border-radius: 12px;
-    font-size: larger;
+    font-size: 1rem;
     background-color: rgb(235, 235, 235);
 }
 
@@ -119,5 +122,21 @@ button:hover {
 
 .result {
     font-weight:bold;
+}
 
+/* 📱 EXTRA MOBILE RESPONSIVE (NUOVO) */
+@media (max-width: 600px) {
+
+    .title, .box {
+        margin: 1rem;
+        padding: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    input, .menu, button {
+        font-size: 16px;
+    }
 }

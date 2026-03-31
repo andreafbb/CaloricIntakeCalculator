@@ -10,16 +10,26 @@ body {
     background-color: #EBEBEB;
     min-height: 100vh;   /* 🔥 invece di height */
     display: flex;
-    justify-content: center;
+
+    /* ❌ MODIFICATO: meglio verticale su mobile */
+    flex-direction: column;  /* ➕ aggiunto */
+    
+    justify-content: flex-start; /* ❌ invece di center */
     align-items: center;
+
     padding: 20px;       /* 🔥 aggiunto per mobile */
 }
 
 #root {
     width: 100%;
     display: flex;
+
+    /* ❌ MODIFICATO: struttura più naturale */
+    flex-direction: column;  /* ➕ aggiunto */
+
     justify-content: center;
-    padding: 10px; /* 🔥 aggiunto */
+    align-items: center; /* ➕ aggiunto */
+    padding: 10px; 
 }
 
 .title {
@@ -27,9 +37,12 @@ body {
     border-radius: 20px;
     text-align: center;
     padding: 2rem;
-    margin: 1.5rem; /* 🔥 ridotto per mobile */
+
+    /* 🔥 MODIFICATO: più stabile su mobile */
+    margin: 1rem auto; 
+
     width: 100%;
-    max-width: 420px; /* 🔥 leggermente aumentato */
+    max-width: 420px;
     box-shadow: 0 0 20px #b9b9b9;
 }
 
@@ -41,11 +54,20 @@ h1 {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
+
     padding: 2rem;
-    margin: 1.5rem; /* 🔥 ridotto */
+
+    /* 🔥 MODIFICATO */
+    margin: 1rem auto;
+
     width: 100%;
     max-width: 420px;
     box-shadow: 0 0 20px #b9b9b9;
+
+    /* ➕ NUOVO: migliora spacing interno */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .writing_labels {
@@ -59,12 +81,16 @@ h1 {
 
 /* 🔥 INPUT MOBILE FIX */
 input {
-    width: 100%;          /* 🔥 aggiunto */
+    width: 100%;
     padding: 0.7rem;
+
     margin-bottom: 1rem;
+
     background-color: #dbdada;
     border: none;
-    font-size: 16px;      /* 🔥 importante per mobile (evita zoom iOS) */
+
+    font-size: 16px;
+
     box-shadow: 0 0 5px rgb(216, 215, 215);
     border-radius: 12px;
 }
@@ -85,9 +111,12 @@ input:focus {
     appearance: none;
     width: 100%;
     padding: 10px;
+
     border: 2px solid #ccc;
     border-radius: 8px;
+
     background-color: white;
+
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -108,9 +137,12 @@ button {
     width: 100%;          /* 🔥 prima era 150px */
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 0.7rem;
+
+    padding: 0.9rem; /* 🔥 leggermente più grande */
+
     border: none;
     border-radius: 12px;
+
     font-size: 1rem;
     background-color: rgb(235, 235, 235);
 }
@@ -128,7 +160,7 @@ button:hover {
 @media (max-width: 600px) {
 
     .title, .box {
-        margin: 1rem;
+        margin: 0.8rem;
         padding: 1.2rem;
     }
 

@@ -1,0 +1,123 @@
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+
+}
+
+body {
+    background-color: #EBEBEB;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem;
+    margin:3rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px #b9b9b9;
+}
+
+h1 {
+    padding:1rem
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+     padding: 2rem;
+    margin:3rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px #b9b9b9;
+}
+
+.writing_labels {
+    display: block;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.gender_button {
+  margin-right: 1rem;
+}
+
+input {
+padding: 0.5rem;
+margin-bottom: 1rem;
+background-color: #dbdada;
+border: none;
+font-size: 1rem;
+box-shadow: 0 0 5px rgb(216, 215, 215);
+border-radius: 12px;
+}
+
+input:hover {
+    border: 2px solid #888;
+    background-color: #c9c9c9;
+}
+
+input:focus {
+    outline: none; /* rimuove il bordo blu default */
+    border: 2px solid #000000;
+    box-shadow: 0 0 5px #010101;
+}
+
+.menu {
+    appearance: none;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu:hover {
+    border-color: #999;
+}
+
+.menu:focus {
+    outline: none; /* rimuove il bordo blu default */
+    border: 2px solid #000000;
+    box-shadow: 0 0 5px #010101;
+}
+
+button {
+    width: 100%;
+    max-width: 150px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;    
+    border: none;
+    border-radius: 12px;
+    font-size: larger;
+    background-color: rgb(235, 235, 235);
+}
+
+button:hover {
+    border: 2px solid #888;
+    background-color: #c9c9c9;
+}
+
+.result {
+    font-weight:bold;
+
+}

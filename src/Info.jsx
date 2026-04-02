@@ -67,34 +67,52 @@ function Info(){
     }
 
     return(
+    <div className="parent">
+        <div className="child_box">
 
-        <div>
-            <div className="box">
-
-           
+           {/*Age writing label*/}
+           <div className="child2_writing_label">
             <label className="writing_labels" htmlFor="age">Age (18-80)</label>
-            <input type="number" id="age" placeholder="18-80" value={age} onChange={(e) => setAge(e.target.value)} />
+            <input  type="number" id="age" placeholder="18-80" value={age} onChange={(e) => setAge(e.target.value)} />
+            </div>
+            
 
+            <div className="child2_gender_buttons">
+            {/* Gender buttons*/}
           <form>
-            <label className="gender_button" >
+            <div className="gender_button"> 
+            <label>
                 <input type="radio" name="gender" value="male" checked={gender === "male"}
                 onChange={(e) => setGender(e.target.value)} /> Male
             </label>
+            </div>  
 
-            <label className="gender_button">
+            <div className="gender_button">
+            <label>
                 <input type="radio" name="gender" value="female" checked={gender === "female"}
                 onChange={(e) => setGender(e.target.value)}/> Female
             </label>
+            </div>
           </form>
+    
+          </div>
 
+            <div className="child2_writing_label">
+            {/*Height writing label*/}
             <label className="writing_labels"  htmlFor="height">Height (cm)</label>
             <input type="number" id="height" placeholder="170" value={height} onChange={(e) => setHeight(e.target.value)} />
+            </div>
 
+            <div className="child2_writing_label">
+            {/*Weight writing label*/}
             <label className="writing_labels"  htmlFor="weight">Weight (kg)</label>
             <input type="number" id="weight" placeholder="60" value={weight} onChange={(e) => setWeight(e.target.value)} />
+            </div>
 
+        <div className="child2_select_activity_level">
+            {/*Activity level select label*/}
             <label className="writing_labels"  htmlFor="activity">Activity Level</label>
-                <select className=""
+                <select className="menu"
                              id="activity"
                             name="activity"
                             value={activity}
@@ -106,18 +124,17 @@ function Info(){
                             <option value="1.725">Active</option>
                             <option value="1.9">Very Active</option>
                             </select>
+                </div>
+             </div>
 
-            <div className="results_box">
+             {/*Result box*/}
+                <div className="child_result_box">
                 <button onClick={calculateBMR}>Calculate</button>
                 <div className="result">
                 {result}
                 </div>
-            </div>
-
-
-            </div>
+                </div>
         </div>
-
     );
 };
 
